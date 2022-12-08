@@ -1,10 +1,11 @@
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
+
 [![MIT License][license-shield]][license-url]
 
 <div>
-<h3 align="center">The Tech Blog</h3>
+<h2 align="center">The Tech Blog</h2>
 <p align="center">
     A blog where tech enthusiasts can come to chat!
     <br />
