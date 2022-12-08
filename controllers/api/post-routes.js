@@ -9,7 +9,6 @@ router.post("/", auth, async (req, res) => {
     const newPost = await Post.create({ ...content, userId: req.session.userId });
     res.status(200).json({newPost, message: 'Created Message!'});
   } catch (err) {
-    alert('Something went wrong.');
     res.status(500).json(err);
   };
 });
