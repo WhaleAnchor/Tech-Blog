@@ -48,9 +48,13 @@ Here is a link to the repo: <a href="https://github.com/WhaleAnchor/Tech-Blog">T
 ### Built With
 
 [![Handlebars][handlebars-shield]][handlebars-url]
+
 [![NodeJS][nodejs-shield]][nodejs-url]
+
 [![ExpressJS][expressjs-shield]][expressjs-url]
+
 [![mysql][mysql-shield]][mysql-url]
+
 [![sequelize][sequelize-shield]][sequelize-url]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -80,9 +84,6 @@ Here is a link to the repo: <a href="https://github.com/WhaleAnchor/Tech-Blog">T
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-
 ## Usage
 
 If you want to try using the deployed website follow these instructions below!
@@ -92,7 +93,8 @@ If you want to try using the deployed website follow these instructions below!
    https://arcane-caverns-02440.herokuapp.com/
    ```
 2. Sign up and you can start right away!
-    <img align="center" src="./assets/screenshot3.png" alt="Image of how to sign up" width="400">
+
+![Tech-Blog](/assets/screenshot3.png "Instructions to sign up") 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
