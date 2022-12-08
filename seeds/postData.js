@@ -4,14 +4,14 @@ const postdata =
 [
   {
     "id": 1,
-    "postTitle": "Hello, nice to meet you all!",
+    "postTitle": "Hello, everyone!",
     "postContent": "Comment below what your favorite color is :D",
     "date_created": "2022-01-01",
     "userId": 1
   },
   {
     "id": 2,
-    "postTitle": "Does anyone ever feel like",
+    "postTitle": "You like?",
     "postContent": "dancing in the rain?",
     "date_created": "2022-02-02",
     "userId": 2

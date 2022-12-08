@@ -17,6 +17,8 @@ const newPost = async (event) => {
   if (response.ok) {
     alert("Successfully made a new post!");
     document.location.replace('/dashboard');
+  } else {
+    alert ("Something went wrong.")
   }
 };
 
