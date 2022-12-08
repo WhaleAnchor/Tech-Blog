@@ -1,4 +1,4 @@
-// TECH BLOG - CHECKED, SAME AS REFERENCE
+// Imported packages
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -6,17 +6,25 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+// import sequelize and set up sequelize store
 const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// start express app
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({ helpers });
 
+// set up cookies
 const sess = {
-  secret: 'Tech blog secret',
-  cookie: {},
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 24 * 60 * 60 * 1000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -26,6 +34,7 @@ const sess = {
 
 app.use(session(sess));
 
+// Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -35,15 +44,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// INSTEAD OF LINE 5:
-// app.use(require('./controllers/'));
-
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-  sequelize.sync({ force: false });
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
-
-// SAME AS BELOW:
-// sequelize.sync({ force: false }).then(() => {
-//   app.listen(PORT, () => console.log('Now listening'));
-// });
