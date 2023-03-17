@@ -108,7 +108,7 @@ Distributed under the MIT License.
 
 Andrew Choi - https://github.com/WhaleAnchor
 
-Project Link: [https://github.com/WhaleAnchor/Employee-Tracker](https://github.com/WhaleAnchor/Employee-Tracker)
+Project Link: [[https://github.com/WhaleAnchor/Employee-Tracker](https://github.com/WhaleAnchor/Tech-Blog)]([https://github.com/WhaleAnchor/Employee-Tracker](https://github.com/WhaleAnchor/Tech-Blog))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
