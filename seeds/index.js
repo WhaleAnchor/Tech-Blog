@@ -3,12 +3,17 @@ const user = require('./userData');
 const post = require('./postData');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+  try {
+    await sequelize.sync({ force: true });
 
   await user();
   await post();
 
   process.exit(0);
+  } catch (error) {
+    console.log(error)
+  };
+  
 };
 
 seedAll();
