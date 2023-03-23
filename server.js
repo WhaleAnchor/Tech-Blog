@@ -10,6 +10,12 @@ const helpers = require('./utils/helpers');
 const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// handles unhandled promise rejections globally.
+process.on('unhandledRejection', (err) => {
+  console.error('Unhandled promise rejection:', err);
+  process.exit(1);
+});
+
 // start express app
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -44,6 +50,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-await sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
